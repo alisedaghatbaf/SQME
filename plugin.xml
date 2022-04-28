@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SQME Plugin"
+            id="sqmeplugin">
+      </category>
+      <view
+            category="sqmeplugin"
+            class="hcsanplugin.views.StructureView"
+            icon="icons/sample.gif"
+            id="hcsanplugin.views.StructureView"
+            name="HCSAN Structure View"
+            restorable="true">
+      </view>
+      <view
+            name="HCSAN Model View"
+            icon="icons/sample.gif"
+            category="sqmeplugin"
+            class="hcsanplugin.views.HCSANView"
+            id="hcsanplugin.views.HCSANView">
+      </view>
+      <view
+            category="sqmeplugin"
+            class="ftplugin.views.StructureView"
+            icon="icons/sample.gif"
+            id="ftplugin.views.StructureView"
+            name="Fault Tree Structure View"
+            restorable="true">
+      </view>
+      <view
+            name="Fault Tree Model View"
+            icon="icons/sample.gif"
+            category="sqmeplugin"
+            class="ftplugin.views.FTView"
+            id="ftplugin.views.FTView">
+      </view>
+      <view
+            name="Attack Tree Model View"
+            icon="icons/sample.gif"
+            category="sqmeplugin"
+            class="atplugin.views.ATView"
+            id="ftplugin.views.ATView">
+      </view>
+        <view
+            category="sqmeplugin"
+            class="atplugin.views.StructureView"
+            icon="icons/sample.gif"
+            id="atplugin.views.StructureView"
+            name="Attack Tree Structure View"
+            restorable="true">
+      </view>
+      <view
+            name="TPN View"
+            icon="icons/sample.gif"
+            category="sqmeplugin"
+            class="tpnplugin.views.TPNView"
+            id="tpnplugin.views.TPNView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               id="hcsanplugin.views.HCSANView"
+               minimized="false"
+               ratio="1."
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList"
+               visible="true">
+         </view>
+         <view
+               id="hcsanplugin.views.StructureView"
+               minimized="false"
+               ratio="1."
+               relationship="left"
+               relative="org.eclipse.ui.views.TaskList"
+               
+               visible="true">
+         </view>
+         <view
+               id="tpnplugin.views.TPNView"
+               minimized="false"
+               ratio="1."
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList"
+               visible="true">
+         </view>
+         <view
+               id="ftplugin.views.FTView"
+               minimized="false"
+               ratio="1."
+               visible="true"
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+         <view
+               id="ftplugin.views.StructureView"
+               minimized="false"
+               ratio="1."
+               relationship="left"
+               relative="org.eclipse.ui.views.TaskList"
+               
+               visible="true">
+         </view>
+         <view
+               id="atplugin.views.ATView"
+               minimized="false"
+               ratio="1."
+               visible="true"
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+         <view
+               id="atplugin.views.StructureView"
+               minimized="false"
+               ratio="1."
+               relationship="left"
+               relative="org.eclipse.ui.views.TaskList"
+               
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+  
+
+</plugin>
